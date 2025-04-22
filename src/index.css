@@ -1,0 +1,86 @@
+/* Global styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #ddd;
+  --error-color: red;
+  --border-radius: 8px;
+  --spacing: 1rem;
+  --font-family: sans-serif;
+}
+
+/* App container */
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--spacing);
+  font-family: var(--font-family);
+}
+
+/* Search bar */
+.search-bar {
+  display: flex;
+  margin-bottom: var(--spacing);
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid var(--secondary-color);
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+
+.search-bar button {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--secondary-color);
+  border-left: none;
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  background-color: var(--primary-color);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+  background-color: darken(var(--primary-color), 10%);
+}
+
+/* Anime list */
+.anime-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: var(--spacing);
+}
+
+.anime-card {
+  border: 1px solid var(--secondary-color);
+  border-radius: var(--border-radius);
+  padding: 0.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.anime-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.anime-card img {
+  width: 100%;
+  border-radius: calc(var(--border-radius) / 2);
+}
+
+/* Error message */
+.error {
+  color: var(--error-color);
+}
+
+/* Recommendation section */
+.recommendation-section {
+  margin-top: calc(var(--spacing) * 2);
+}
