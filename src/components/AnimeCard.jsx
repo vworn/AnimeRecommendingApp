@@ -14,3 +14,5 @@ function AnimeCard({ anime, onShowRecommendations }) {
 }
 
 export default AnimeCard;
+
+//Create AnimeCard component to display anime image, title, score, and button
