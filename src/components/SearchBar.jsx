@@ -31,3 +31,5 @@ const SearchBar = ({ onSearch }) => {
 };
 
 export default SearchBar;
+
+//Add SearchBar component with controlled input and submit handler
