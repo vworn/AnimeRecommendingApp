@@ -29,3 +29,5 @@ function RecommendationSection({ recommendations }) {
 }
 
 export default RecommendationSection;
+
+//Add RecommendationSection component to fetch and show related anime
