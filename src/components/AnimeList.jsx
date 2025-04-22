@@ -19,3 +19,5 @@ function AnimeList({ animeList = [], loading, onShowRecommendations }) {
 }
 
 export default AnimeList;
+
+//Implement AnimeList component to render grid of AnimeCard items
