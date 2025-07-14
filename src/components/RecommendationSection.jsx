@@ -1,7 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function RecommendationSection({ recommendations }) {
   const [showRecommendations, setShowRecommendations] = useState(false);
+
+  // Automatically show recommendations when new data is provided
+  useEffect(() => {
+    if (recommendations && recommendations.length > 0) {
+      setShowRecommendations(true);
+    }
+  }, [recommendations]);
 
   const handleToggleRecommendations = () => {
     setShowRecommendations(!showRecommendations);
